@@ -1,0 +1,36 @@
+Operating system: Android
+                  0.0.0 Linux 3.4.0-perf-g16e203d #1 SMP PREEMPT Wed Nov 19 05:47:52 UTC 2014 armv7l
+CPU: arm
+     ARMv7 Qualcomm Krait features: swp,half,thumb,fastmult,vfpv2,edsp,neon,vfpv3,tls,vfpv4
+     4 CPUs
+
+Crash reason:  SIGSEGV
+Crash address: 0x0
+Process uptime: not available
+
+Thread 0 (crashed)
+ 0  test_google_breakpad!main [test_breakpad.cpp : 46 + 0x0]
+     r0 = 0xbef2e9a4    r1 = 0x00000000    r2 = 0x00000001    r3 = 0x00000000
+     r4 = 0xb6f0edd4    r5 = 0x00000000    r6 = 0x00000001    r7 = 0xb6f30b25
+     r8 = 0x00000000    r9 = 0x00000000   r10 = 0x00000000   r12 = 0xb6f41f5c
+     fp = 0xbef2ea4c    sp = 0xbef2e940    lr = 0xb6f30de0    pc = 0xb6f30b6e
+    Found by: given as instruction pointer in context
+ 1  libc.so + 0x11e95
+     r4 = 0xbef2ea54    r5 = 0xbef2ea5c    r6 = 0x00000001    r7 = 0xb6f30b25
+     r8 = 0x00000000    r9 = 0x00000000   r10 = 0x00000000    fp = 0xbef2ea4c
+     sp = 0xbef2ea20    pc = 0xb6ec5e97
+    Found by: call frame info
+ 2  linker + 0x36fd
+     sp = 0xbef2ea50    pc = 0xb6f226ff
+    Found by: stack scanning
+
+Loaded modules:
+0xb6e6a000 - 0xb6e6afff  libnetd_client.so  ???
+0xb6e6e000 - 0xb6e8dfff  __properties__  ???
+0xb6e8e000 - 0xb6e91fff  libstdc++.so  ???
+0xb6e92000 - 0xb6eaafff  libm.so  ???
+0xb6eac000 - 0xb6eb2fff  liblog.so  ???
+0xb6eb4000 - 0xb6f0dfff  libc.so  ???  (WARNING: No symbols, libc.so, 10EC186B04E97F6A24DAA891779479380)
+0xb6f18000 - 0xb6f1afff  libsigchain.so  ???
+0xb6f1f000 - 0xb6f2dfff  linker  ???  (WARNING: No symbols, linker, F27F6F9401E4DA6101244E738AE9CE3C0)
+0xb6f2f000 - 0xb6f3ffff  test_google_breakpad  ???  (main)
